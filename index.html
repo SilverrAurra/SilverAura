@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Aura | Elegant Jewelry from Egypt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-gem"></i>
+                Silver Aura
+            </a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#products">Collections</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-icons">
+                <button class="cart-btn" onclick="toggleCart()">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="hero-subtitle">Welcome to Silver Aura</span>
+            <h1 class="hero-title">Timeless Elegance<br>Egyptian Craftsmanship</h1>
+            <p class="hero-description">Discover our stunning collection of handcrafted Pandora-style jewelry. Each piece tells a story of elegance, quality, and timeless beauty.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+                <a href="#about" class="btn btn-secondary">Our Story</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&h=700&fit=crop" alt="Elegant Jewelry">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <i class="fa-solid fa-gem"></i>
+            <h3>Premium Quality</h3>
+            <p>Authentic materials and expert craftsmanship</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Fast Delivery</h3>
+            <p>Across Egypt with secure packaging</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-gift"></i>
+            <h3>Gift Wrapping</h3>
+            <p>Beautiful packaging for special moments</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-headset"></i>
+            <h3>24/7 Support</h3>
+            <p>We're here to help anytime</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="section-header">
+            <span class="section-subtitle">Our Collection</span>
+            <h2 class="section-title">Explore Our Jewelry</h2>
+            <p class="section-description">Handcrafted pieces that capture moments and create memories</p>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="category-filter">
+            <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+            <button class="filter-btn" onclick="filterProducts('rings')">Rings</button>
+            <button class="filter-btn" onclick="filterProducts('bracelets')">Bracelets</button>
+            <button class="filter-btn" onclick="filterProducts('necklaces')">Necklaces</button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be loaded dynamically -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1589128777076-f639a841f9c4?w=600&h=600&fit=crop" alt="Our Story">
+            </div>
+            <div class="about-content">
+                <span class="section-subtitle">About Silver Aura</span>
+                <h2 class="section-title">Crafting Beauty Since 2024</h2>
+                <p>Founded in Egypt, Silver Aura brings you the finest Pandora-style jewelry, crafted with passion and precision. Our mission is to make luxury accessible to everyone while maintaining the highest standards of quality.</p>
+                <p>We believe every piece of jewelry tells a story — your story. Whether it's a symbol of love, a celebration of achievement, or simply a treat for yourself, our collections are designed to make every moment special.</p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <i class="fa-solid fa-check"></i>
+                        <span>100% Authentic Materials</span>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Handcrafted with Love</span>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Egyptian Excellence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <span class="section-subtitle">Get In Touch</span>
+            <h2 class="section-title">Contact Us</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Cairo, Egypt</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+20 123 456 7890</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hello@silveraura.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <div>
+                        <h4>Instagram</h4>
+                        <p>@SilverAuraEG</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-facebook"></i>
+                    <div>
+                        <h4>Facebook</h4>
+                        <p>SilverAuraEgypt</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Your Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Select Product Interest</option>
+                        <option value="rings">Rings</option>
+                        <option value="bracelets">Bracelets</option>
+                        <option value="necklaces">Necklaces</option>
+                        <option value="other">General Inquiry</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Shopping Bag</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fa-solid fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fa-solid fa-shopping-bag"></i>
+                <p>Your bag is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">EGP 0</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" onclick="checkout()">
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-gem"></i>
+                    Silver Aura
+                </a>
+                <p>Elegant jewelry crafted with passion in Egypt. Making moments memorable since 2024.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#products">Collections</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h4>Collections</h4>
+                <a href="#">Rings</a>
+                <a href="#">Bracelets</a>
+                <a href="#">Necklaces</a>
+                <a href="#">New Arrivals</a>
+            </div>
+            <div class="footer-links">
+                <h4>Customer Service</h4>
+                <a href="#">Shipping Info</a>
+                <a href="#">Returns Policy</a>
+                <a href="#">FAQ</a>
+                <a href="#">Size Guide</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Silver Aura. All rights reserved. Made with <i class="fa-solid fa-heart"></i> in Egypt</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
