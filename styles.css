@@ -2,19 +2,22 @@
    SILVER AURA - ELEGANT JEWELRY WEBSITE STYLES
    ============================================ */
 
-/* CSS Variables */
+/* CSS Variables - PINK & GOLD COLORS */
 :root {
-    --primary-color: #B8860B;
-    --primary-dark: #9A7209;
+    --primary-color: #E91E63;
+    --primary-dark: #C2185B;
+    --primary-light: #F48FB1;
+    --gold-color: #B8860B;
+    --gold-dark: #9A7209;
     --secondary-color: #1a1a1a;
     --text-color: #333333;
     --text-light: #666666;
     --white: #ffffff;
-    --off-white: #f9f9f9;
+    --off-white: #fdf2f7;
     --gray-light: #f5f5f5;
-    --border-color: #e5e5e5;
-    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
+    --border-color: #f8e1e9;
+    --shadow: 0 4px 20px rgba(233, 30, 99, 0.1);
+    --shadow-hover: 0 8px 30px rgba(233, 30, 99, 0.2);
     --transition: all 0.3s ease;
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Lato', Arial, sans-serif;
@@ -70,48 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================
-   BUTTONS
-   ============================================ */
-
-.btn {
-    display: inline-block;
-    padding: 14px 32px;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 4px;
-    transition: var(--transition);
-    cursor: pointer;
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: 2px solid var(--primary-color);
-}
-
-.btn-primary:hover {
-    background-color: var(--primary-dark);
-    border-color: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
-}
-
-.btn-secondary:hover {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    transform: translateY(-2px);
-}
-
-/* ============================================
-   NAVIGATION
+   NAVIGATION - CENTERED
    ============================================ */
 
 .navbar {
@@ -125,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 15px 40px;
     display: flex;
@@ -137,13 +99,20 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-size: 28px;
     font-weight: 700;
-    color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--gold-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 .logo i {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--gold-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-size: 24px;
 }
 
@@ -169,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--gold-color) 100%);
     transition: var(--transition);
 }
 
@@ -178,7 +147,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--gold-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .nav-icons {
@@ -190,19 +162,19 @@ h1, h2, h3, h4, h5, h6 {
 .cart-btn {
     position: relative;
     font-size: 20px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     transition: var(--transition);
 }
 
 .cart-btn:hover {
-    color: var(--primary-color);
+    color: var(--gold-color);
 }
 
 .cart-count {
     position: absolute;
     top: -8px;
     right: -8px;
-    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--gold-color) 100%);
     color: var(--white);
     font-size: 11px;
     font-weight: 600;
@@ -217,45 +189,26 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-menu-btn {
     display: none;
     font-size: 24px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 /* ============================================
-   HERO SECTION
+   HERO SECTION - CENTERED
    ============================================ */
 
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 120px 40px 80px;
     background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
 }
 
-.hero-content {
-    flex: 1;
-    max-width: 600px;
-    padding-right: 60px;
-}
-
-.hero-subtitle {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.hero-title {
-    font-size: 64px;
-    color: var(--secondary-color);
-    margin-bottom: 24px;
-    line-height: 1.1;
-}
-
-.hero-description {
-    font-size: 18px;
-    color: var(--text-light);
-    margin-bottom: 32px;
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
